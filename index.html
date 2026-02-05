@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combo PVP - Arena</title>
+    <script type="module" crossorigin src="./assets/index.f44aa0fb.js"></script>
+    <link rel="stylesheet" href="./assets/index.61e30310.css">
+    <style>
+      body {
+        background-color: #0f0f0f;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      window.language = {
+        teamOne: 'Time 1',
+        teamTwo: 'Time 2',
+        deathsOnHud: 'MORTES',
+        killsOnHud: 'KILLS',
+        shotsOnHud: 'TIROS',
+        headshotOnHud: 'HS',
+        arenaCategory: 'Arena',
+        arenaTitle: 'Arena',
+        arenaSubTitle: 'Jogue com seu time contra os adversários!',
+        freeForAllCategory: 'FFA',
+        freeForAllTitle: 'Todos contra todos',
+        freeForAllSubTitle: 'Jogue sozinho contra todos!',
+        streetCategory: 'Desce e quebra',
+        streetTitle: 'Desce e quebra',
+        streetSubTitle: 'Simule uma ação de rua, e drope do seu veículo!',
+        trainingCategory: 'Aimbot',
+        trainingTitle: 'Treino de mira',
+        trainingSubTitle: 'Aqueça sua mira e reflexos!',
+        rankCategory: 'Rank',
+        rankTitle: 'Rank',
+        rankSubTitle: 'Veja quem são os melhores!',
+        scoreFfa: 'Leaderboard do “FFA”',
+        scoreTraining: 'Leaderboard do “Treino de mira”',
+        scoreStreet: 'Leaderboard do “Desce e quebra”',
+        ffaMode: 'Área de PVP',
+        leaveFfa: 'Sair do PVP',
+        arenaMode: 'Arena',
+        leaveArena: 'Sair da arena',
+        trainingMode: 'Treino de mira',
+        leaveTraining: 'Sair do Treino de mira',
+        leaveButton: 'Botão F7',
+        startButton: 'Iniciar',
+        findAGameButton: 'Jogar',
+        selectButton: 'Selecionar',
+        freeForAllPosition: 'Posição',
+        freeForAllInRank: 'No ranking',
+        trainingPosition: 'Posição',
+        trainingInRanking: 'No ranking'
+      };
+
+      // Função para forçar a exibição da interface no ambiente web
+      function forceShow() {
+        window.postMessage({ action: 'setVisible', value: true }, '*');
+        window.postMessage({ action: 'openPanel', value: true }, '*');
+        window.postMessage({ action: 'show', value: true }, '*');
+        window.postMessage({ type: 'setVisible', value: true }, '*');
+      }
+
+      // Tentar mostrar imediatamente e após alguns intervalos para garantir que o React carregou
+      forceShow();
+      setTimeout(forceShow, 500);
+      setTimeout(forceShow, 1000);
+      setTimeout(forceShow, 2000);
+      
+      // Adicionar um listener para garantir que cliques ou interações também tentem mostrar se sumir
+      document.addEventListener('DOMContentLoaded', forceShow);
+    </script>
+  </body>
+</html>
